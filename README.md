@@ -46,6 +46,7 @@ This is my first Lua library, so things might be a little weird :)
 - [x] `p` to paste
 - [x] `s` to delete under cursor, exit normal mode
 - [x] `u` to undo
+- [x] `ctrl + r` to redo 
 - [x] `y` to yank to clipboard
 - [x] `/` to trigger `cmd+f` search
 - [x] visual mode with `v`
