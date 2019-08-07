@@ -340,6 +340,11 @@ function VimMode:bindModeKeys()
     self:restoreCursor()
   end
 
+  local redo = function()
+    utils.sendKeys({'cmd', 'shift'}, 'z')
+    self:restoreCursor()
+  end
+
   local deleteUnderCursor = compose(
     operators.delete(self),
     isNormalMode(motions.right(self))
@@ -372,6 +377,7 @@ function VimMode:bindModeKeys()
   self.mode:bind({'shift'}, 'o', newLineAbove)
   self.mode:bind({}, 'p', paste)
   self.mode:bind({}, 'u', undo)
+  self.mode:bind({'ctrl'}, 'r', redo)
 
   ---------- commands
   self.mode:bind({}, '/', searchAhead)
