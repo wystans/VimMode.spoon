@@ -50,6 +50,7 @@ return {
   beginningOfLine = defineMotion('left', {'command'}),
   endOfLine = defineMotion('right', {'command'}),
   endOfText = defineMotion('down', {'command'}),
+  beginningOfText = defineMotion('up', {'command'}),
   left = defineMotion('left'),
   right = defineMotion('right'),
   up = defineMotion('up'),
